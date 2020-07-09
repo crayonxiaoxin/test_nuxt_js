@@ -1,1 +1,0 @@
-# test_nuxt_js
