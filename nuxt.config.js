@@ -8,7 +8,7 @@ export default {
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
    */
-  target: 'static',
+  target: 'server',
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
@@ -55,6 +55,7 @@ export default {
     '@nuxtjs/proxy',
   ],
   axios: {
+    // baseURL: 'https://api.sunofbeach.net/',
     proxy: true,
   },
   proxy: {
@@ -78,7 +79,8 @@ export default {
         minSize: 10000,
         maxSize: 250000,
       }
-    }
+    },
+    vendor: ['axios'],
   },
   router: {
     // root dir
